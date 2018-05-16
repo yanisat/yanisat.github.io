@@ -10,88 +10,23 @@
 
     <title>Boston Against Highways</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <style>
-      body {
-        padding-top: 54px;
-      }
-      @media (min-width: 992px) {
-        body {
-          padding-top: 56px;
-        }
-      }
-
-    </style>
-
     <svg width="960" height="600"></svg>
     <script src="https://d3js.org/d3.v4.min.js"></script>
 
   </head>
 
   <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">Boston Against Highways</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="story.html">Story</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="map.html">Map</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="network.html">Network
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
     <div class="container">
       <div class="row">
       <script>
-      var baseNodes = [
-        { id: "upa", group: 0, label: "Urban Planning Aid", level: 1 },
-        { id: "fsalvucci", group: 0, label: "Fred Salvucci", level: 2 },
-        { id: "tlee", group: 0, label: "Tunney Lee"   , level: 2 },
-        { id: "dblackett", group: 0, label: "Denis Blackett", level: 2 },
-        // { id: "elk", group: 0, label: "Elk"    , level: 2 },
-        { id: "btpr", group: 1, label: "Boston Transportaton Planning Review", level: 1 },
-        { id: "aaltshuler", group: 1, label: "Alan Altshuler", level: 2 },
-        { id: "jwofford", group: 1, label: "Jack Wofford", level: 2 },
-        // { id: "fish"  , group: 2, label: "Fish"   , level: 1 },
-        // { id: "carp"  , group: 2, label: "Carp"   , level: 2 },
-        // { id: "pike"  , group: 2, label: "Pikes"  , level: 2 }
-      ]
-      var baseLinks = [
-      	{ target: "upa", source: "fsalvucci" , strength: 0.7 },
-      	{ target: "upa", source: "tlee" , strength: 0.7 },
-        { target: "upa", source: "dblackett" , strength: 0.7 },
-        { target: "btpr", source: "aaltshuler" , strength: 0.7 },
-        { target: "btpr", source: "jwofford" , strength: 0.7 },
-        { target: "btpr", source: "fsalvucci" , strength: 0.7 },
-        // { target: "fish"  , source: "carp", strength: 0.7 },
-        // { target: "fish"  , source: "pike", strength: 0.7 },
-        // { target: "cat"   , source: "elk" , strength: 0.1 },
-        // { target: "carp"  , source: "ant" , strength: 0.1 },
-        // { target: "elk"   , source: "bee" , strength: 0.1 },
-        // { target: "dog"   , source: "cat" , strength: 0.1 },
-        // { target: "fox"   , source: "ant" , strength: 0.1 },
-      	// { target: "pike"  , source: "cat" , strength: 0.1 }
-      ]
+      d3.queue()
+        .defer(d3.csv, "/data/baseNodes.csv")
+        .defer(d3.csv, "/data/baseLinks.csv")
+        .await(ready);
+
+      function ready(error, baseNodes, baseLinks) {
+        if (error) throw error;
+
       var nodes = [...baseNodes]
       var links = [...baseLinks]
       function getNeighbors(node) {
@@ -265,13 +200,12 @@
       // last but not least, we call updateSimulation
       // to trigger the initial render
       updateSimulation()
+
+    }
       </script>
     </div>
   </div>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   </body>
 

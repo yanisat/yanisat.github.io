@@ -5418,6 +5418,12 @@ button.close {
   padding: 1rem;
 }
 
+.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .modal-footer {
   display: -ms-flexbox;
   display: flex;
@@ -5447,7 +5453,7 @@ button.close {
 
 @media (min-width: 576px) {
   .modal-dialog {
-    max-width: 500px;
+    max-width: 700px;
     margin: 1.75rem auto;
   }
   .modal-dialog-centered {

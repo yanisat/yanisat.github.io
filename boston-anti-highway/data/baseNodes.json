@@ -1,0 +1,9 @@
+[
+  { "id": "upa", "group": 0, "label": "Urban Planning Aid", "level": 1 },
+  { "id": "fsalvucci", "group": 0, "label": "Fred Salvucci", "level": 2 },
+  { "id": "tlee", "group": 0, "label": "Tunney Lee", "level": 2 },
+  { "id": "dblackett", "group": 0, "label": "Denis Blackett", "level": 2 },
+  { "id": "btpr", "group": 1, "label": "Boston Transportaton Planning Review", "level": 1 },
+  { "id": "aaltshuler", "group": 1, "label": "Alan Altshuler", "level": 2 },
+  { "id": "jwofford", "group": 1, "label": "Jack Wofford", "level": 2 }
+]

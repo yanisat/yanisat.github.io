@@ -399,7 +399,7 @@ header.masthead .intro-text .intro-heading {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 40px;
+  left: 25px;
   width: 2px;
   margin-left: -1.5px;
   content: '';
@@ -445,10 +445,10 @@ header.masthead .intro-text .intro-heading {
 
 .timeline > li .timeline-image {
   position: absolute;
-  z-index: 100;
+  z-index: 0;
   left: 0;
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   margin-left: 0;
   text-align: center;
   color: white;
@@ -517,9 +517,9 @@ header.masthead .intro-text .intro-heading {
   }
   .timeline > li .timeline-image {
     left: 50%;
-    width: 100px;
-    height: 100px;
-    margin-left: -50px;
+    width: 50px;
+    height: 50px;
+    margin-left: -25px;
   }
   .timeline > li .timeline-image h4 {
     font-size: 13px;
@@ -541,9 +541,9 @@ header.masthead .intro-text .intro-heading {
     padding: 0 20px 20px;
   }
   .timeline > li .timeline-image {
-    width: 150px;
-    height: 150px;
-    margin-left: -75px;
+    width: 50px;
+    height: 50px;
+    margin-left: -25px;
   }
   .timeline > li .timeline-image h4 {
     font-size: 18px;
@@ -563,9 +563,9 @@ header.masthead .intro-text .intro-heading {
     padding: 0 20px 20px 100px;
   }
   .timeline > li .timeline-image {
-    width: 170px;
-    height: 170px;
-    margin-left: -85px;
+    width: 50px;
+    height: 50px;
+    margin-left: -25px;
   }
   .timeline > li .timeline-image h4 {
     margin-top: 40px;
@@ -596,60 +596,73 @@ header.masthead .intro-text .intro-heading {
   margin-top: 0;
 }
 
-section#contact {
+section#about {
   background-color: #212529;
-  background-image: url("../img/map-image.png");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-section#contact .section-heading {
+section#about .section-heading {
   color: #fff;
 }
 
-section#contact .form-group {
+section#about .about-subheading {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 75px;
+  text-transform: none;
+  font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+section#about .about-text {
+  color: #fff;
+}
+
+section#about .form-group {
   margin-bottom: 25px;
 }
 
-section#contact .form-group input,
-section#contact .form-group textarea {
+section#about .form-group input,
+section#about .form-group textarea {
   padding: 20px;
 }
 
-section#contact .form-group input.form-control {
+section#about .form-group input.form-control {
   height: auto;
 }
 
-section#contact .form-group textarea.form-control {
+section#about .form-group textarea.form-control {
   height: 248px;
 }
 
-section#contact .form-control:focus {
+section#about .form-control:focus {
   border-color: #fed136;
   box-shadow: none;
 }
 
-section#contact ::-webkit-input-placeholder {
+section#about ::-webkit-input-placeholder {
   font-weight: 700;
   color: #ced4da;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-section#contact :-moz-placeholder {
+section#about :-moz-placeholder {
   font-weight: 700;
   color: #ced4da;
   /* Firefox 18- */
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-section#contact ::-moz-placeholder {
+section#about ::-moz-placeholder {
   font-weight: 700;
   color: #ced4da;
   /* Firefox 19+ */
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-section#contact :-ms-input-placeholder {
+section#about :-ms-input-placeholder {
   font-weight: 700;
   color: #ced4da;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
