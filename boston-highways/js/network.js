@@ -39,7 +39,7 @@ diagram.append("rect")
 .style("fill","white");
 
 d3.queue()
- .defer(d3.csv, "/data/baseNodes.csv", function(d){
+ .defer(d3.csv, "/boston-highways/data/baseNodes.csv", function(d){
    return {
      id : d.id,
      group : d.group,
@@ -49,7 +49,7 @@ d3.queue()
      detail : d.detail
    };
  })
- .defer(d3.csv, "/data/baseLinks.csv", function(d){
+ .defer(d3.csv, "/boston-highways/data/baseLinks.csv", function(d){
    return {
      target : d.target,
      source: d.source,
